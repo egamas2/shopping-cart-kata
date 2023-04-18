@@ -22,7 +22,6 @@ public class Product implements CartItem<Product>{
     }
 
     public Double getPriceWithVAT() {
-        //fails with  new Product("Iceberg 🥬", 155L, 15.0, 21.0), 2.17,//fails
         BigDecimal applyRevenue = BigDecimal.valueOf(costInCents)
                 .multiply(
                         BigDecimal.valueOf(100).add(
